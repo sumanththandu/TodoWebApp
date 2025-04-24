@@ -1,0 +1,33 @@
+# Maven target directory
+/target/
+
+# Eclipse/IntelliJ/VSCode project files
+*.iml
+.idea/
+*.ipr
+*.iws
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment and temporary files
+.env
+*.tmp
+
+# Compiled class files
+*.class
+
+# Spring Boot devtools restart files
+.spring-boot-devtools.properties
+
+# H2 Database (if file-based, not in-memory)
+*.h2.db
+*.mv.db
+
+# Node modules (if using frontend stuff like npm)
+node_modules/
