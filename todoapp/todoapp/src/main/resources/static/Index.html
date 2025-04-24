@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Todo App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f8ff;
+            color: #212529;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: #212529;
+            color: #f0f8ff;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .no-tasks {
+            color: #007bff;
+            font-style: italic;
+        }
+        .high {
+            color: red;
+        }
+        .medium {
+            color: orange;
+        }
+        .low {
+            color: green;
+        }
+        /* adjust borders and buttons in dark mode */
+        body.dark-mode .border {
+            border-color: #444 !important;
+        }
+        body.dark-mode .btn-outline-info {
+            color: #f0f8ff;
+            border-color: #0dcaf0;
+        }
+        body.dark-mode .btn-outline-info:hover {
+            background-color: rgba(13,202,240,0.1);
+        }
+        body.dark-mode .btn-success {
+            background-color: #198754;
+            border-color: #198754;
+        }
+        body.dark-mode .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container py-4">
+    <h1 class="mb-4">🚀 Vibrant Todo App</h1>
+    <div class="mb-2 d-flex align-items-center">
+        <span id="stats">0 tasks completed</span>
+        <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary ms-3">Dark Mode</button>
+    </div>
+
+    <input type="text" id="searchInput" oninput="searchTasks()" class="form-control mb-3" placeholder="Search tasks...">
+
+    <div class="mb-3">
+        <select id="filterSelect" class="form-select" onchange="applyFilter()">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="pending">Pending</option>
+            <option value="due">Due Today</option>
+        </select>
+    </div>
+
+    <form onsubmit="addTodo(event)" class="mb-4">
+        <input type="text" id="todoInput" class="form-control mb-2" placeholder="Add a new task..." required>
+        <textarea id="todoDescriptionInput" class="form-control mb-2" placeholder="Add description..."></textarea>
+        <input type="date" id="todoDueDateInput" class="form-control mb-2">
+        <select id="todoPriorityInput" class="form-select mb-2">
+            <option value="">Select priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        <input type="text" id="todoCategoryInput" class="form-control mb-2" placeholder="Category (e.g. Work, Personal)">
+        <button type="submit" class="btn btn-primary">Add Task</button>
+    </form>
+
+    <div id="todoList"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="taskDetailsModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taskTitle">Task Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="taskDescription">No description</p>
+                    <p><strong>Due Date:</strong> <span id="taskDueDate">No due date set</span></p>
+                    <p><strong>Priority:</strong> <span id="taskPriority">No priority set</span></p>
+                    <p><strong>Category:</strong> <span id="taskCategory">No category set</span></p>
+                    <p><strong>Status:</strong> <span id="taskStatus">Pending</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Initialize from localStorage
+    let todoList = JSON.parse(localStorage.getItem('todoList') || '[]');
+    let idCounter = parseInt(localStorage.getItem('idCounter') || '1', 10);
+
+    // Save to localStorage
+    function saveToStorage() {
+        localStorage.setItem('todoList', JSON.stringify(todoList));
+        localStorage.setItem('idCounter', idCounter);
+    }
+
+    function addTodo(event) {
+        event.preventDefault();
+        const title = document.getElementById('todoInput').value.trim();
+        const description = document.getElementById('todoDescriptionInput').value.trim();
+        const dueDate = document.getElementById('todoDueDateInput').value;
+        const priority = document.getElementById('todoPriorityInput').value;
+        const category = document.getElementById('todoCategoryInput').value.trim();
+        const task = { id: idCounter++, title, description, dueDate, priority, category, completed: false };
+        todoList.push(task);
+        saveToStorage();
+        document.querySelector('form').reset();
+        displayTodos(todoList);
+    }
+
+    function displayTodos(list) {
+        const container = document.getElementById('todoList');
+        container.innerHTML = '';
+        if (list.length === 0) {
+            container.innerHTML = '<p class="no-tasks">✨ No tasks yet. Add one!</p>';
+            updateStats();
+            return;
+        }
+        list.forEach(todo => {
+            const div = document.createElement('div');
+            div.className = 'd-flex justify-content-between align-items-center border p-2 mb-2 ' + (todo.completed ? 'completed' : '');
+            div.innerHTML = `
+          <div>
+            <strong>${todo.title}</strong>
+          </div>
+          <div>
+            <button class="btn btn-sm btn-${todo.completed ? 'secondary' : 'success'} me-2" onclick="toggleComplete(${todo.id})">
+              ${todo.completed ? 'Mark Pending' : 'Mark Complete'}
+            </button>
+            <button class="btn btn-sm btn-info me-2" onclick="showTaskDetails(${todo.id})">Details</button>
+            <button class="btn btn-sm btn-danger" onclick="deleteTodo(${todo.id})">Delete</button>
+          </div>
+        `;
+            container.appendChild(div);
+        });
+        updateStats();
+    }
+
+    function toggleComplete(id) {
+        const todo = todoList.find(t => t.id === id);
+        if (!todo) return;
+        todo.completed = !todo.completed;
+        saveToStorage();
+        displayTodos(todoList);
+    }
+
+    function showTaskDetails(id) {
+        const todo = todoList.find(t => t.id === id);
+        if (!todo) return;
+        document.getElementById('taskTitle').textContent = todo.title;
+        document.getElementById('taskDescription').textContent = todo.description || 'No description';
+        document.getElementById('taskDueDate').textContent = todo.dueDate || 'No due date set';
+        document.getElementById('taskPriority').textContent = todo.priority || 'No priority set';
+        document.getElementById('taskCategory').textContent = todo.category || 'No category set';
+        document.getElementById('taskStatus').textContent = todo.completed ? 'Completed' : 'Pending';
+        new bootstrap.Modal(document.getElementById('taskDetailsModal')).show();
+    }
+
+    function searchTasks() {
+        const term = document.getElementById('searchInput').value.toLowerCase();
+        const filtered = todoList.filter(todo =>
+            todo.title.toLowerCase().includes(term) ||
+            (todo.category && todo.category.toLowerCase().includes(term))
+        );
+        displayTodos(filtered);
+    }
+
+    function applyFilter() {
+        const filter = document.getElementById('filterSelect').value;
+        let filtered = todoList;
+        const today = new Date().toISOString().split('T')[0];
+        if (filter === 'completed') {
+            filtered = todoList.filter(t => t.completed);
+        } else if (filter === 'pending') {
+            filtered = todoList.filter(t => !t.completed);
+        } else if (filter === 'due') {
+            filtered = todoList.filter(t => t.dueDate === today);
+        }
+        displayTodos(filtered);
+    }
+
+    function updateStats() {
+        const completedCount = todoList.filter(t => t.completed).length;
+        document.getElementById('stats').textContent = `${completedCount} tasks completed`;
+    }
+
+    function deleteTodo(id) {
+        todoList = todoList.filter(todo => todo.id !== id);
+        saveToStorage();
+        displayTodos(todoList);
+    }
+
+
+    // Dark/light mode
+    const modeToggle = document.getElementById('darkModeToggle');
+    modeToggle.onclick = () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        modeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    };
+    // Apply stored theme
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        modeToggle.textContent = '☀️ Light Mode';
+    }
+
+    // Initial display
+    displayTodos(todoList);
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

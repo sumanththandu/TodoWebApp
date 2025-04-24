@@ -1,0 +1,144 @@
+2025-04-23 16:18:51.786859-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:18:56.775583-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:19:00.467581-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:28:33.176911-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:28:41.514237-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+insert into todo (completed,title,id) values (?,?,default) [42104-232]
+2025-04-23 16:28:41.553658-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:30:16.005903-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:30:16.950410-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:30:17.112197-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:30:17.401327-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:30:17.502419-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:30:17.566370-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:30:24.131931-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:30:42.701815-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:30:48.452937-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+insert into todo (completed,title,id) values (?,?,default) [42104-232]
+2025-04-23 16:30:48.472220-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:33:20.589903-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+insert into todo (completed,title,id) values (?,?,default) [42104-232]
+2025-04-23 16:33:40.233125-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:34:50.713218-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+insert into todo (completed,title,id) values (?,?,default) [42104-232]
+2025-04-23 16:35:17.196323-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:35:18.884596-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:35:19.837279-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:35:20.501375-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:35:24.794496-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+insert into todo (completed,title,id) values (?,?,default) [42104-232]
+2025-04-23 16:35:24.816960-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:37:41.288611-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:37:44.846151-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+insert into todo (completed,title,id) values (?,?,default) [42104-232]
+2025-04-23 16:37:44.870286-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:43:57.093929-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+insert into todo (completed,title,id) values (?,?,default) [42104-232]
+2025-04-23 16:43:57.118974-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:44:04.943923-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:51:50.094296-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:51:51.273784-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:51:51.475628-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:51:51.688811-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:51:51.896454-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:51:52.014631-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:51:52.268797-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:51:53.980298-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:51:57.988685-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+insert into todo (completed,title,id) values (?,?,default) [42104-232]
+2025-04-23 16:51:58.008710-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:54:00.575755-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:55:03.118414-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:55:07.785171-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+insert into todo (completed,title,id) values (?,?,default) [42104-232]
+2025-04-23 16:55:07.815065-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:57:11.313566-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
+2025-04-23 16:57:18.344374-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+insert into todo (completed,title,id) values (?,?,default) [42104-232]
+2025-04-23 16:57:18.368472-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TODO" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.completed,t1_0.title from todo t1_0 [42104-232]
